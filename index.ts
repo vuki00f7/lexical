@@ -1,3 +1,1 @@
-export {
-    createEditor,
-  } from './LexicalEditor';
+export { createEditor } from './LexicalEditor';

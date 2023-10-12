@@ -9,6 +9,7 @@
   "author": "Mateo Vuković",
   "license": "ISC",
   "devDependencies": {
+    "prettier": "^3.0.3",
     "typescript": "^5.2.2"
   }
 }

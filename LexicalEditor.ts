@@ -1,18 +1,32 @@
+import { internalGetActiveEditor } from './LexicalUpdates';
+
+export type EditorThemeClassName = string;
+
+export type EditorThemeClasses = {
+  blockCursor?: EditorThemeClassName;
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  [key: string]: any;
+};
+
 export type CreateEditorArgs = {
-    disableEvents?: boolean;
-}
+  disableEvents?: boolean;
+  theme?: EditorThemeClasses;
+  parentEditor?: LexicalEditor;
+};
 
-export function createEditor(editorConfig?: CreateEditorArgs) : LexicalEditor {
-    const config = editorConfig || {};
+export function createEditor(editorConfig?: CreateEditorArgs): LexicalEditor {
+  const config = editorConfig || {};
+  const activeEditor = internalGetActiveEditor();
+  const theme = config.theme || {};
+  const parentEditor =
+    editorConfig === undefined ? activeEditor : config.parentEditor || null;
+  const disableEvents = config.disableEvents || false;
 
-    const editor = new LexicalEditor();
+  const editor = new LexicalEditor();
 
-    return editor;
-
+  return editor;
 }
 
 export class LexicalEditor {
-    constructor() {
-
-    }
+  constructor() {}
 }
