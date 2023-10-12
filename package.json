@@ -1,0 +1,14 @@
+{
+  "name": "lexical",
+  "version": "1.0.0",
+  "description": "A tool for understanding lexical source code.",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mateo Vuković",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.2.2"
+  }
+}
