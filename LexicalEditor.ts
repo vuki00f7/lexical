@@ -4,6 +4,8 @@ export type EditorThemeClassName = string;
 
 export type EditorThemeClasses = {
   blockCursor?: EditorThemeClassName;
+  characterLimit?: EditorThemeClassName;
+  code?: EditorThemeClassName;
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
   [key: string]: any;
 };
