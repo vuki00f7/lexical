@@ -25,7 +25,6 @@ export function createEditor(editorConfig?: CreateEditorArgs): LexicalEditor {
   const parentEditor =
     editorConfig === undefined ? activeEditor : config.parentEditor || null;
   const disableEvents = config.disableEvents || false;
-  // TODO: Continue on this
   const editorState = createEmptyEditorState();
 
   const editor = new LexicalEditor();
