@@ -1,6 +1,6 @@
 import { LexicalNode, NodeKey } from './LexicalNode';
 
-import { errorOnReadOnly } from './LexicalUpdates';
+import { errorOnInfiniteTransforms, errorOnReadOnly } from './LexicalUpdates';
 
 export function $setNodeKey(
   node: LexicalNode,
@@ -11,5 +11,6 @@ export function $setNodeKey(
     return;
   }
   errorOnReadOnly();
+  errorOnInfiniteTransforms();
   // TODO: continue here
 }
